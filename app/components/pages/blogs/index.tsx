@@ -1,15 +1,12 @@
 import React from 'react';
 import { blogsMock } from './mock';
 import Blog from '../blog';
+import Heading from '../../atoms/Heading';
 
 const Blogs: React.FC = () => {
   return (
     <div>
-      <header className="blog-header lh-1 py-3">
-        <h1>
-          <center>Blogs</center>
-        </h1>
-      </header>
+      <Heading>Blogs</Heading>
       <div className="row mb-2">
         {blogsMock.map((blog) => {
           return (
