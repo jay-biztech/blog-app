@@ -1,3 +1,3 @@
-import { BlogProps } from '../blog/types';
+import { BlogProps } from '../components/pages/blog/types';
 
 export type BlogsProps = BlogProps[];

@@ -2,16 +2,18 @@ import Link from 'next/link';
 import DateFormatter from '../../atoms/DateFormatter';
 import Description from '../../atoms/Description';
 import Title from '../../atoms/Title';
-import { PanelProps } from './types';
+import { DetailPanelProps } from './types';
 
-const Panel: React.FC<PanelProps> = ({ title, date, description, url }) => {
+const DetailPanel: React.FC<DetailPanelProps> = ({
+  title,
+  date,
+  description,
+}) => {
   return (
-    <div className="col-md-6">
+    <div className="col-md-12">
       <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div className="col p-4 d-flex flex-column position-static">
-          <Link href={url}>
-            <Title>{title}</Title>
-          </Link>
+          <Title>{title}</Title>
           <DateFormatter>{date}</DateFormatter>
           <Description>{description}</Description>
         </div>
@@ -20,4 +22,4 @@ const Panel: React.FC<PanelProps> = ({ title, date, description, url }) => {
   );
 };
 
-export default Panel;
+export default DetailPanel;

@@ -1,6 +1,5 @@
-export type PanelProps = {
+export type DetailPanelProps = {
   title: string;
   description: string;
   date: string;
-  url: string;
 };

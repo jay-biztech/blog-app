@@ -3,4 +3,5 @@ export type BlogProps = {
   title: string;
   description: string;
   date: string;
+  url: string;
 };
