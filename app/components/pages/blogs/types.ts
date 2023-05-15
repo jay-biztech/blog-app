@@ -1,6 +1,3 @@
-export type BlogProps = {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-}[];
+import { BlogProps } from '../blog/types';
+
+export type BlogsProps = BlogProps[];

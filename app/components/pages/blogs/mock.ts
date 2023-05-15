@@ -1,6 +1,6 @@
-import { BlogProps } from './types';
+import { BlogsProps } from './types';
 
-export const blogsMock: BlogProps = [
+export const blogsMock: BlogsProps = [
   {
     id: 1,
     title: 'Blog 1',

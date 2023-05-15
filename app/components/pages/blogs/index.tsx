@@ -1,22 +1,24 @@
 import React from 'react';
 import { blogsMock } from './mock';
+import Blog from '../blog';
 
-const Blog: React.FC = () => {
+const Blogs: React.FC = () => {
   return (
     <div>
       <h2>Blogs</h2>
       {blogsMock.map((blog) => {
         return (
-          <>
-            <h4>{blog.id}</h4>
-            <h4>{blog.title}</h4>
-            <p>{blog.description}</p>
-            <p>{blog.date}</p>
-          </>
+          <Blog
+            key={blog.id}
+            id={blog.id}
+            title={blog.title}
+            description={blog.description}
+            date={blog.date}
+          />
         );
       })}
     </div>
   );
 };
 
-export default Blog;
+export default Blogs;
