@@ -1,1 +1,1 @@
-export type DateProps = { children: Date };
+export type DateProps = { children: string };

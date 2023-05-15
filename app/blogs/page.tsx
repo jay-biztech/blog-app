@@ -1,7 +1,7 @@
 import React from 'react';
 import { blogsMock } from './mock';
-import Blog from '../blog';
-import Heading from '../../atoms/Heading';
+import Heading from '../components/atoms/Heading';
+import Blog from '../blog/page';
 
 const Blogs: React.FC = () => {
   return (
