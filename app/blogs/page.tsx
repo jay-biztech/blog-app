@@ -1,18 +1,25 @@
-import React from 'react';
-import { blogsMock } from './mock';
 import Heading from '../components/atoms/Heading';
 import Blog from '../components/pages/blog/page';
+import { BlogProps } from '../components/pages/blog/types';
 
-const Blogs: React.FC = () => {
+async function getBlogs() {
+  const res = await fetch(`${process.env.BASE_URL}/blogs`);
+  return res.json();
+}
+
+export default async function Blogs() {
+  const blogsData = getBlogs();
+  const [blogs] = await Promise.all([blogsData]);
+
   return (
     <div>
       <Heading>Blogs</Heading>
       <div className="row mb-2">
-        {blogsMock.map(({ id, title, description, date }) => {
+        {blogs.map(({ id, title, description, date }: BlogProps) => {
           return (
             <Blog
               key={id}
-              url={`/blogs/${id}`}
+              url={`blogs/${id}`}
               {...{ id, title, description, date }}
             />
           );
@@ -20,6 +27,4 @@ const Blogs: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Blogs;
+}
