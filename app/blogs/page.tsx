@@ -8,16 +8,8 @@ const Blogs: React.FC = () => {
     <div>
       <Heading>Blogs</Heading>
       <div className="row mb-2">
-        {blogsMock.map((blog) => {
-          return (
-            <Blog
-              key={blog.id}
-              id={blog.id}
-              title={blog.title}
-              description={blog.description}
-              date={blog.date}
-            />
-          );
+        {blogsMock.map(({ id, title, description, date }) => {
+          return <Blog key={id} {...{ id, title, description, date }} />;
         })}
       </div>
     </div>
