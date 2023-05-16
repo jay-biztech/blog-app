@@ -13,11 +13,7 @@ const Panel: React.FC<PanelProps> = ({ title, date, description, url }) => {
             <Title>{title}</Title>
           </Link>
           <DateFormatter>{date}</DateFormatter>
-          <Description>
-            {description.length > 200
-              ? `${description.substring(0, 200)}...`
-              : description}
-          </Description>
+          <Description text={description} limit={200} />
         </div>
       </div>
     </div>

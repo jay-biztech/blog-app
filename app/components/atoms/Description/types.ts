@@ -1,1 +1,4 @@
-export type DescriptionProps = { children: string };
+export type DescriptionProps = {
+  text: string;
+  limit?: number;
+};

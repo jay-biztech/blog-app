@@ -15,7 +15,7 @@ const DetailPanel: React.FC<DetailPanelProps> = ({
         <div className="col p-4 d-flex flex-column position-static">
           <Title>{title}</Title>
           <DateFormatter>{date}</DateFormatter>
-          <Description>{description}</Description>
+          <Description text={description} />
         </div>
       </div>
     </div>
