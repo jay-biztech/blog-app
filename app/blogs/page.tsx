@@ -23,7 +23,7 @@ export default async function Blogs() {
     <div>
       <Heading>Blogs</Heading>
       <Link href="blogs/create">
-        <Button title="Create" type={ButtonType.Primary}></Button>
+        <Button title="Create" buttonType={ButtonType.Primary}></Button>
       </Link>
       <div className="row mb-2">
         {blogs.map(({ id, title, description, date }: BlogProps) => {

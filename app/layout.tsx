@@ -23,7 +23,10 @@ export default function RootLayout({
         ></link>
       </head>
       <body className="container">
-        <Button title="Dark Mode ( Coming Soon... )" type={ButtonType.Dark} />
+        <Button
+          title="Dark Mode ( Coming Soon... )"
+          buttonType={ButtonType.Dark}
+        />
         {children}
       </body>
     </html>
