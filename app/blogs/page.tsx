@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Button, { ButtonType } from '../components/atoms/Button';
 import Heading from '../components/atoms/Heading';
 import Blog from '../components/pages/blog/page';
 import { BlogProps } from '../components/pages/blog/types';
@@ -20,6 +22,9 @@ export default async function Blogs() {
   return (
     <div>
       <Heading>Blogs</Heading>
+      <Link href="blogs/create">
+        <Button title="Create" type={ButtonType.Primary}></Button>
+      </Link>
       <div className="row mb-2">
         {blogs.map(({ id, title, description, date }: BlogProps) => {
           return (
