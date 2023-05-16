@@ -1,3 +1,4 @@
+import Button, { ButtonType } from './components/atoms/Button';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -21,7 +22,10 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className="container">{children}</body>
+      <body className="container">
+        <Button title="Dark Mode ( Coming Soon... )" type={ButtonType.Dark} />
+        {children}
+      </body>
     </html>
   );
 }
