@@ -1,6 +1,8 @@
+import axios from 'axios';
+import { Inter } from 'next/font/google';
 import Button, { ButtonType } from './components/atoms/Button';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,6 +16,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  axios.defaults.baseURL = 'http://localhost:4000';
+
   return (
     <html lang="en">
       <head>
@@ -23,10 +27,15 @@ export default function RootLayout({
         ></link>
       </head>
       <body className="container">
-        <Button
-          title="Dark Mode ( Coming Soon... )"
-          buttonType={ButtonType.Dark}
-        />
+        <div className="d-flex justify-content-between">
+          <Button
+            title="Dark Mode ( Coming Soon... )"
+            buttonType={ButtonType.Dark}
+          />
+          <Link href="/">
+            <Button title="Back to Home" buttonType={ButtonType.Info} />
+          </Link>
+        </div>
         {children}
       </body>
     </html>
