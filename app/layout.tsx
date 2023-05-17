@@ -32,7 +32,7 @@ export default function RootLayout({
             title="Dark Mode ( Coming Soon... )"
             buttonType={ButtonType.Dark}
           />
-          <Link href="/">
+          <Link prefetch={false} href="/blogs">
             <Button title="Back to Home" buttonType={ButtonType.Info} />
           </Link>
         </div>

@@ -3,6 +3,7 @@ import Button, { ButtonType } from '../components/atoms/Button';
 import Heading from '../components/atoms/Heading';
 import Blog from '../components/pages/blog/page';
 import { BlogProps } from '../components/pages/blog/types';
+export const revalidate = 0;
 
 async function getBlogs() {
   const res = await fetch(`${process.env.BASE_URL}/blogs`);
