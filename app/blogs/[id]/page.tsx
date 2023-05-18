@@ -1,4 +1,5 @@
 import BlogDetail from '@/app/components/pages/blog-detail/page';
+import axios from 'axios';
 
 async function getBlog(id: number) {
   const res = await fetch(`${process.env.BASE_URL}/blogs/${id}`);

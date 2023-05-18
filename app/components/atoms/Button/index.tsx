@@ -13,9 +13,12 @@ export enum ButtonType {
   Link = 'btn-link',
 }
 
-const Button: React.FC<ButtonProps> = ({ title, type }) => {
+const Button: React.FC<ButtonProps> = ({ title, buttonType, type }) => {
   return (
-    <button type="button" className={`btn ${type} mt-3`}>
+    <button
+      type={type === undefined ? 'button' : type}
+      className={`btn ${buttonType} mt-3 mb-3`}
+    >
       {title}
     </button>
   );
